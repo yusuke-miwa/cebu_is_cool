@@ -31,15 +31,50 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	public $components = array('DebugKit.Toolbar');
-        public $helpers = array(
-        'Session',
-        'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
-        'Form' => array('className' => 'BoostCake.BoostCakeForm'),
-        'Paginator' => array('className' => 'BoostCake.BoostCakePaginator'),
-        'Js',
-        'Time',
-        );
 
-        public $layout = 'bootstrap3';
+    public $components = array(
+        'DebugKit.Toolbar',
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array(
+                'controller' => 'pages',
+                'action' => 'display',
+                'home'
+            ),
+            'logoutRedirect' => array(
+                'controller' => 'pages',
+                'action' => 'display',
+                'home'
+            ),
+            'authenticate' => array(
+                'Form' => array(
+                    'passwordHasher' => 'Blowfish'
+                )
+            ),
+            'authorize' => array('Controller')
+        )
+    );
+
+    public $helpers = array(
+      'Session',
+      'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
+      'Form' => array('className' => 'BoostCake.BoostCakeForm'),
+      'Paginator' => array('className' => 'BoostCake.BoostCakePaginator'),
+      'Js',
+      'Time'
+    );
+
+    public $layout = 'bootstrap3';
+    
+
+    public function beforeFilter() {
+        $this->Auth->allow('index', 'view');
+    }
+
+    public function isAuthorized($user) {
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+        return false;
+    }
 }
