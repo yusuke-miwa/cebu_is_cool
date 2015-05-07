@@ -29,6 +29,7 @@
 	<![endif]-->
 
 	<?php
+	echo $this->Html->css('custom');
 	echo $this->fetch('meta');
 	echo $this->fetch('css');
 	?>
