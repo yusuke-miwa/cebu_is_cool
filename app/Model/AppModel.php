@@ -30,4 +30,16 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+    var $actsAs = array(
+        'UploadPack.Upload' => array(
+            'image' => array(
+                'quality' => 95,
+                'styles' => array(
+                    'thumb' => '85x85'
+                )        
+            )
+        ),
+    );
 }
+
