@@ -1,4 +1,6 @@
-<?php echo $this->Html->link('Back', array('action' => 'index')); ?>
+<p><?php echo $this->Html->link('Top', array('controller' => 'tops', 'action' => 'index')); ?></p>
+
+<?php echo $this->Html->link('Favorite List', array('action' => 'index')); ?>
 
 <h1><?php echo h($favorite['Favorite']['title']); ?></h1>
 

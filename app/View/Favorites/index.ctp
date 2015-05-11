@@ -1,3 +1,5 @@
+<p><?php echo $this->Html->link('Top', array('controller' => 'tops', 'action' => 'index')); ?></p>
+
 <?php echo $this->Html->link(
     'Add favorite',
     array('controller' => 'favorites', 'action' => 'add')
@@ -28,7 +30,7 @@ array('controller' => 'favorites', 'action' => 'view', $food['Favorite']['id']))
 </table>
 
 
-<h1><?php echo $this->Html->link('Spot', array('controller' => 'favorites', 'action' => 'category_show', $foods[0]['Favorite']['category_id'])); ?></h1>
+<h1><?php echo $this->Html->link('Spot', array('controller' => 'favorites', 'action' => 'category_show', $spots[0]['Favorite']['category_id'])); ?></h1>
 <table>
     <tr>
         <th>Title</th>
@@ -53,7 +55,7 @@ array('controller' => 'favorites', 'action' => 'view', $spot['Favorite']['id']))
 </table>
 
 
-<h1><?php echo $this->Html->link('Activity', array('controller' => 'favorites', 'action' => 'category_show', $foods[0]['Favorite']['category_id'])); ?></h1>
+<h1><?php echo $this->Html->link('Activity', array('controller' => 'favorites', 'action' => 'category_show', $activities[0]['Favorite']['category_id'])); ?></h1>
 <table>
     <tr>
         <th>Title</th>

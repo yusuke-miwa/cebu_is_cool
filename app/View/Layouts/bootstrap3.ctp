@@ -37,7 +37,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -46,21 +46,27 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<?php echo $this->Html->link('BoostCake', array(
-					'plugin' => 'boost_cake',
-					'controller' => 'boost_cake',
+				<?php echo $this->Html->link('Cebu is Cool', array(
+				       //	'plugin' => 'boost_cake',
+					'controller' => 'tops',
 					'action' => 'index'
 				), array('class' => 'navbar-brand')); ?>
 			</div>
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<ul class="nav navbar-nav">
-					<li><?php echo $this->Html->link('Bootstrap3', array(
-						'action' => 'bootstrap3'
+				<ul class="nav navbar-nav navbar-right">
+					<li><?php echo $this->Html->link('Top', array(
+						'controller' => 'tops',
+						'action' => 'index'
 					)); ?></li>
-					<li><?php echo $this->Html->link('Bootstrap2', array(
-						'action' => 'bootstrap2'
+					<li><?php echo $this->Html->link('Favorite', array(
+						'controller' => 'favorites',
+						'action' => 'index'
 					)); ?></li>
+					<li><?php echo $this->Html->link('Blog', array(
+                                                'controller' => 'posts',
+                                                'action' => 'index'
+                                        )); ?></li>
 				</ul>
 			</div>
 		</div>

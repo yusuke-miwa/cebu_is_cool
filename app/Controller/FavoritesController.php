@@ -69,7 +69,7 @@ class FavoritesController extends AppController {
         if (!$category_show) {
             throw new NotFoundException(__('Invalid category'));
         }
-        $this->set('category_show', $category_show);
+        $this->set('category_shows', $category_show);
 	debug($category_show);
     }
 

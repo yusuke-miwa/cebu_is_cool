@@ -1,3 +1,5 @@
+<!-- <li><a href="javascript:;"><?php echo $this->Html->link('to Favorite', array('action' => 'index', $favorite['Favorite']['id'])); ?></a></li> -->
+
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
 <h1>CebuCool Blog</h1>
 
