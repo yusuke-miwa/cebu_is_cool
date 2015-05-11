@@ -14,7 +14,9 @@
         <div class="col-md-10 blogShort">
                      <h1><?php echo h($post['Post']['title']); ?></h1>
                      <p><?php echo h($post['Post']['body']); ?></p>
-                     <p><?php echo $this->Upload->uploadImage($post,'Post.image',array('style'=>'thumb'));?></p>
+                    <!-- <p><?php echo $this->Upload->uploadImage($post,'Post.image',array('style'=>'mini'));?></p>--!>
+                    <!-- <p><?php echo $this->Upload->uploadImage($post,'Post.image',array('style'=>'thumb'));?></p>--!>
+                     <p><?php echo $this->Upload->uploadImage($post,'Post.image',array('style'=>'large'));?></p>
         </div>
 
 <p><small>Created: <?php echo $post['Post']['created']; ?></small></p>
