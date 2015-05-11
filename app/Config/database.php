@@ -79,10 +79,10 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'cebu_is_cool',
-		'password' => 'cebuiscool',
-		'database' => 'cebu_is_cool',
+		'login' => 'user',
+		'password' => 'password',
+		'database' => 'test_database_name',
 		'prefix' => '',
-		'encoding' => 'utf8',
+		//'encoding' => 'utf8',
 	);
 }
