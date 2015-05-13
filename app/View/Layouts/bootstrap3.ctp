@@ -22,15 +22,28 @@
 		width: 220px;
 	}
 	</style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+  <?php
+  echo $this->Html->script('jquery.mb.YTPlayer');
+  ?>
 
+  <script>
+    $(function(){
+        $(".player").mb_YTPlayer();
+      });
+  </script>
+  <?php
+  echo $this->Html->css('YTPlayer');
+  ?>
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
 	<?php
 	echo $this->Html->css('custom');
-        echo $this->Html->css('login');
+  echo $this->Html->css('login');
+  echo $this->Html->css('registration');
+  echo $this->Html->script('registration');
 	echo $this->fetch('meta');
 	echo $this->fetch('css');
 	?>
@@ -93,7 +106,7 @@
 	<!-- Le javascript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 	<?php echo $this->fetch('script'); ?>
