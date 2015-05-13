@@ -3,10 +3,21 @@
 	         <div class="col-sm-2 paddingTop20">
             <nav class="nav-sidebar">
                 <ul class="nav">
-                    <li class="active"><a href="javascript:;"><?php echo $this->Html->link('<i class="glyphicon glyphicon-backward"></i> Back', array('action' => 'index', $post['Post']['id']), array('escape' => false)); ?></a></li>
+                    <li class="active"><?php echo $this->Html->link('<i class="glyphicon glyphicon-backward"></i> Back', array('action' => 'index', $post['Post']['id']), array('escape' => false)); ?></li>
+
                     <li><a href="javascript:;"><?php echo $this->Html->link('Blog Edit', array('action' => 'edit', $post['Post']['id'])); ?></a></li>
                     <li class="nav-divider"></li>
-                    <li><a href="javascript:;"><i class="glyphicon glyphicon-off"></i> Sign in</a></li>
+                    <li>
+			<?php
+			if(is_null($user)){
+			  //ログインしていない場合
+				echo $this->Html->link('Login', array('controller' => 'users', 'action' => 'login'));
+			}else{
+			  //ログインしている場合
+			}
+			?>
+			<!-- <a href="javascript:;"><i class="glyphicon glyphicon-off"></i> Sign in</a> -->
+		    </li>
                 </ul>
             </nav>
         </div>  

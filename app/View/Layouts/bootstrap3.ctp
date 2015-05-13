@@ -67,6 +67,18 @@
                                                 'controller' => 'posts',
                                                 'action' => 'index'
                                         )); ?></li>
+					<li><?php if (is_null($user)): ?>
+					    <?php echo $this->Html->link('Login', array(
+                                                'controller' => 'users',
+                                                'action' => 'login')); ?>
+					    <?php else: ?>
+					    <a> ようこそ <?php echo $user['username']; ?> さん</a>
+					    <li><?php echo $this->Html->link('Logout', array(
+						'controller' => 'users',
+						'action' => 'logout')); ?>
+					    </li>
+				            <?php endif; ?>
+					</li>
 				</ul>
 			</div>
 		</div>

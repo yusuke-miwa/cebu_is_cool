@@ -2,6 +2,7 @@
 #################################################
 /app/Config/database.ctp
 /app/tmp
+/app/webroot/upload
 /lib/Cake/Console/Templates/skel/tmp/
 /plugins
 /vendors
