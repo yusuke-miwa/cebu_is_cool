@@ -8,7 +8,7 @@ class FavoritesController extends AppController {
 	$this->set('foods', $foods);
         $this->set('spots', $this->Favorite->find('all', array('conditions' => array('category_id' => 2))));
 	$this->set('activities', $this->Favorite->find('all', array('conditions' => array('category_id' => 3))));
-//    	debug($foods);
+    	debug($foods);
     }
 
     public function view($id = null) {

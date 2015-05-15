@@ -43,7 +43,9 @@
 	echo $this->Html->css('custom');
   echo $this->Html->css('login');
   echo $this->Html->css('registration');
+  echo $this->Html->css('favorite');
   echo $this->Html->script('registration');
+  echo $this->Html->script('favorite');
 	echo $this->fetch('meta');
 	echo $this->fetch('css');
 	?>
@@ -84,6 +86,10 @@
 					    <?php echo $this->Html->link('Login', array(
                                                 'controller' => 'users',
                                                 'action' => 'login')); ?>
+					    <li><?php echo $this->Html->link('登録', array(
+                                                'controller' => 'users',
+                                                'action' => 'add')); ?>
+					    </li>
 					    <?php else: ?>
 					    <a> ようこそ <?php echo $user['username']; ?> さん</a>
 					    <li><?php echo $this->Html->link('Logout', array(

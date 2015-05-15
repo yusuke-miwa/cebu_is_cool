@@ -20,7 +20,12 @@ class UsersController extends AppController {
     }
 
     public function add() {
-        if ($this->request->is('post')) {
+	    $user = $this->Auth->user(); 
+   	    if ($user) {
+                $this->redirect(array('controller' => 'tops', 'action' => 'index'));	
+            }
+
+            if ($this->request->is('post')) {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved'));
@@ -64,6 +69,10 @@ class UsersController extends AppController {
         $this->redirect(array('action' => 'index'));
     }
     public function login() {
+	$user = $this->Auth->user();
+	if ($user) {
+            $this->redirect(array('controller' => 'tops', 'action' => 'index'));
+        }
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 $this->redirect($this->Auth->redirect('/tops'));
