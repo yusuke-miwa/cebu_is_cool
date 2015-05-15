@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<style>
 	body {
-		padding-top: 70px; /* 70px to make the container go all the way to the bottom of the topbar */
+		padding-top: 50px; /* 70px to make the container go all the way to the bottom of the topbar */
 	}
 	.affix {
 		position: fixed;
@@ -44,6 +44,8 @@
   echo $this->Html->css('login');
   echo $this->Html->css('registration');
   echo $this->Html->css('favorite');
+  echo $this->Html->css('add');
+  echo $this->Html->css('top');
   echo $this->Html->script('registration');
   echo $this->Html->script('favorite');
 	echo $this->fetch('meta');
