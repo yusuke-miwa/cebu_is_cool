@@ -1,21 +1,5 @@
  
- <div class="container"> 
 
-<!--Video Section-->
-<section class="content-section video-section">
-  <div class="pattern-overlay">
-  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=48aRX_fImvo',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-        <h1></h1>  
-        <h3></h3>
-     </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Video Section Ends Here-->
 
 
 <div class="container" align="center">
@@ -107,7 +91,6 @@
 <!--
 <table>
    <h2><?php echo $this->Html->link('Favorites', array('controller' => 'favorites', 'action' => 'index')); ?></h2>
-<table>
     <tr>
         <th>Title</th>
         <th>Body</th>
