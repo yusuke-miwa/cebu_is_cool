@@ -105,6 +105,23 @@
 		</div>
 	</nav>
 
+<?php if($this->name == 'Tops'): ?>
+<!--Video Section-->
+<section class="content-section video-section">
+  <div class="pattern-overlay">
+  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=48aRX_fImvo',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        <h1></h1>  
+        <h3></h3>
+     </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Video Section Ends Here-->
+<?php endif; ?>
 	<div class="container">
 
 		<?php echo $this->fetch('content'); ?>
