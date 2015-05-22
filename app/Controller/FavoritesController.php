@@ -1,14 +1,13 @@
 <?php
 
 class FavoritesController extends AppController {
-    public $helpers = array('Html', 'Form');
+    public $helpers = array('Html', 'Form', 'UploadPack.Upload');
 
     public function index() {
 	$foods = $this->Favorite->find('all', array('conditions' => array('category_id' => 1)));
 	$this->set('foods', $foods);
         $this->set('spots', $this->Favorite->find('all', array('conditions' => array('category_id' => 2))));
 	$this->set('activities', $this->Favorite->find('all', array('conditions' => array('category_id' => 3))));
-    	debug($foods);
     }
 
     public function view($id = null) {

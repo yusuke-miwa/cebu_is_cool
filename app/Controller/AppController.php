@@ -68,7 +68,7 @@ class AppController extends Controller {
     
 
     public function beforeFilter() {
-        $this->Auth->allow('index', 'view');
+        $this->Auth->allow('index', 'view', 'category_show');
 	$user = $this->Auth->user();
 	$this->set('user', $user);
         //debug($user); 

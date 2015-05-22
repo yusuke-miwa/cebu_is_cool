@@ -37,7 +37,7 @@ class AppModel extends Model {
                 'quality' => 95,
                 'styles' => array(
                    // 'mini' => '50x50',//
-                    'thumb' => '131x105',
+                    'thumb' => '260x180',
                     'large' => '450x300'
                 )        
             )

@@ -67,7 +67,7 @@
 				       //	'plugin' => 'boost_cake',
 					'controller' => 'tops',
 					'action' => 'index'
-				), array('class' => 'navbar-brand')); ?>
+				), array('class' => 'navbar-brand white')); ?>
 			</div>
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -75,28 +75,28 @@
 					<li><?php echo $this->Html->link('Top', array(
 						'controller' => 'tops',
 						'action' => 'index'
-					)); ?></li>
+					), array('class' => 'white')); ?></li>
 					<li><?php echo $this->Html->link('Favorite', array(
 						'controller' => 'favorites',
 						'action' => 'index'
-					)); ?></li>
+					), array('class' => 'white')); ?></li>
 					<li><?php echo $this->Html->link('Blog', array(
                                                 'controller' => 'posts',
                                                 'action' => 'index'
-                                        )); ?></li>
+                                        ), array('class' => 'white')); ?></li>
 					<li><?php if (is_null($user)): ?>
 					    <?php echo $this->Html->link('Login', array(
                                                 'controller' => 'users',
-                                                'action' => 'login')); ?>
+                                                'action' => 'login'), array('class' => 'white')); ?>
 					    <li><?php echo $this->Html->link('登録', array(
                                                 'controller' => 'users',
-                                                'action' => 'add')); ?>
+                                                'action' => 'add'), array('class' => 'white')); ?>
 					    </li>
 					    <?php else: ?>
-					    <a> ようこそ <?php echo $user['username']; ?> さん</a>
+					    <a class="white"> ようこそ <?php echo $user['username']; ?> さん</a>
 					    <li><?php echo $this->Html->link('Logout', array(
 						'controller' => 'users',
-						'action' => 'logout')); ?>
+						'action' => 'logout'), array('class' => 'white')); ?>
 					    </li>
 				            <?php endif; ?>
 					</li>
